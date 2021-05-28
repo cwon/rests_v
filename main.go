@@ -106,7 +106,6 @@ func get_rest_vaccine_data(quit chan bool, interval_time uint, latitude float64,
 					vq, _ := jsonparser.GetInt(value, "vaccineQuantity", "quantity")
 					if vq > 0 {
 						beeep.Notify("vaccineQuantity > 0 !", name+road, "")
-						return
 					}
 
 				}, "[0]", "data", "rests", "businesses", "items")
